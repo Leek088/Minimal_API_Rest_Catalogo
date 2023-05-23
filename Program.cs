@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using MinimalApiRest.Context;
@@ -6,6 +7,10 @@ using MinimalApiRest.Services;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+=======
+using Microsoft.EntityFrameworkCore;
+using MinimalApiRest.Context;
+>>>>>>> Adicionar arquivos de projeto.
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+<<<<<<< HEAD
 //Recuperar a string de conexão
 var connectionStringMyql = builder.Configuration.GetConnectionString("ConnectionMysql");
 
@@ -202,6 +208,17 @@ app.MapDelete("/produtos/{id:int}", async (int id, AppDbContext appDbContext) =>
 });
 
 
+=======
+//Obter a string de conexão
+var connectionStringMysql = builder.Configuration.GetConnectionString("connectionMysql");
+
+//Incluir o serviço no contexto
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(connectionStringMysql, ServerVersion.AutoDetect(connectionStringMysql)));
+
+var app = builder.Build();
+
+>>>>>>> Adicionar arquivos de projeto.
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -211,8 +228,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+<<<<<<< HEAD
 // Ativar os serviços de autenticar e autorizar
 app.UseAuthentication();
 app.UseAuthorization();
+=======
+>>>>>>> Adicionar arquivos de projeto.
 
 app.Run();
