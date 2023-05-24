@@ -1,4 +1,6 @@
-﻿namespace MinimalApiRest.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace MinimalApiRest.Models;
 
 public class Categoria
 {
@@ -7,5 +9,6 @@ public class Categoria
     public string? Descricao { get; set; }
 
     //Relação de navegação
+    [JsonIgnore]
     public ICollection<Produto>? Produtos { get; set; }
 }
