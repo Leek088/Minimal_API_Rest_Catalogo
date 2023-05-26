@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization;
 
 namespace MinimalApiRest.Models;
-=======
-﻿namespace MinimalApiRest.Models;
->>>>>>> Adicionar arquivos de projeto.
 
 public class Produto
 {
@@ -18,9 +14,7 @@ public class Produto
 
     //Relação de navegação
     public int CategoriaId { get; set; }
-<<<<<<< HEAD
+
     [JsonIgnore]
-=======
->>>>>>> Adicionar arquivos de projeto.
     public Categoria? Categoria { get; set; }
 }
