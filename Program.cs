@@ -24,8 +24,11 @@ app.UseExceptionHandling(environment)
 
 app.UseHttpsRedirection();
 
+<<<<<<< HEAD
 // Ativar os serviços de autenticar e autorizar
 app.UseAuthentication();
 app.UseAuthorization();
+=======
+>>>>>>> Adicionar arquivos de projeto.
 
 app.Run();

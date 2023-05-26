@@ -10,7 +10,11 @@ public class AppDbContext : DbContext
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Produto> Produtos { get; set; }
 
+<<<<<<< HEAD
     //Usando a fluente api para gerenciar as propriedades das entidades
+=======
+    //Usando a fluente api para gerenciar as propriedades e relacionamento das entidades
+>>>>>>> Adicionar arquivos de projeto.
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //Entidade Categoria
