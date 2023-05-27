@@ -9,6 +9,8 @@ public class AppDbContext : DbContext
 
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Produto> Produtos { get; set; }
+
+    //Configuração com Fluent Api
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //Entidade Categoria
@@ -28,7 +30,5 @@ public class AppDbContext : DbContext
             .HasOne<Categoria>(c => c.Categoria)
             .WithMany(p => p.Produtos)
             .HasForeignKey(c => c.CategoriaId);
-
     }
-
 }
